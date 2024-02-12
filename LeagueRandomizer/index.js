@@ -204,6 +204,7 @@ function generateItems() {
 
                 var imageHTML = `<div class="tooltip"><img src="http://ddragon.leagueoflegends.com/cdn/14.3.1/img/item/${imageUrl}" alt="${itemName}" class="leg${i}"><span class="tooltiptext">${itemName}</span><div class="arrow"></div></div>`;
                 items.insertAdjacentHTML('afterend', imageHTML);
+                legendary.splice(random, 1);
             }
 
             const boots = ['3047', '3117', '3006', '3009', '3020', '3111', '3158'].map(key => {
@@ -274,7 +275,6 @@ function generateRunes() {
     var random = Math.floor(Math.random() * paths.length);
     var primary = paths[random];
 
-    console.log(primary)
     paths.splice(random, 1);
 
     random = Math.floor(Math.random() * paths.length);
