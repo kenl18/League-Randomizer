@@ -59,11 +59,11 @@ function generateRole() {
     roleName = roles[random];
 
     if (roleName == 'Jungle') {
-        generateSpell1();
+        smite();
     }
 
     if (role != 'Jungle' && spell1 == 'Smite') {
-        generateSpell1();
+        noSmite();
     }
     
     var role = document.getElementById('role');
@@ -404,4 +404,38 @@ function generateRunes() {
     }
     var imageHTML = `<div class="tooltip"><img src="runes/${primary}/keystones/${random}.webp" alt="${random}" class="keystone"><span class="tooltiptext">${keyStones[random - 1]}</span><div class="arrow"></div></div>`;
     rune.insertAdjacentHTML('afterend', imageHTML);
+}
+
+function smite() {
+    var existingImage = document.querySelector('.spellImg1');
+    if (existingImage) {
+        existingImage.remove();
+    }
+    var imageHTML = `<img src="spells/Smite.png" alt="Smite" class="spellImg1">`;
+    spell.insertAdjacentHTML('afterend', imageHTML);
+}
+
+function noSmite() {
+    var spells = ['Ghost', 'Heal', 'Barrier', 'Exhaust', 'Flash', 'Teleport', 'Cleanse', 'Ignite'];
+
+    var random = Math.floor(Math.random() * spells.length);
+    var spellName = spells[random];
+    
+    if (spellName == spell2) {
+        spells.splice(random, 1);
+        var random = Math.floor(Math.random() * spells.length);
+        var spellName = spells[random];
+    }
+        
+    spell1 = spellName;
+    var spell = document.getElementById('spell1');
+    spell.innerHTML = spellName;
+
+    var existingImage = document.querySelector('.spellImg1');
+    if (existingImage) {
+        existingImage.remove();
+    }
+
+    var imageHTML = `<img src="spells/${spellName}.png" alt="${spellName}" class="spellImg1">`;
+    spell.insertAdjacentHTML('afterend', imageHTML);
 }
