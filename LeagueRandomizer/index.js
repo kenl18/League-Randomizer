@@ -128,6 +128,9 @@ function generateSpell1() {
         var random = Math.floor(Math.random() * spells.length);
         var spellName = spells[random];
 
+        console.log(spellName);
+        console.log(spell2);
+        
         if (spellName == spell2) {
             spells.splice(random, 1);
             var random = Math.floor(Math.random() * spells.length);
@@ -156,6 +159,9 @@ function generateSpell2() {
         var random = Math.floor(Math.random() * spells.length);
         var spellName = spells[random];
 
+        console.log(spellName);
+        console.log(spell1);
+        
         if (spellName == spell1) {
             spells.splice(random, 1);
             var random = Math.floor(Math.random() * spells.length);
