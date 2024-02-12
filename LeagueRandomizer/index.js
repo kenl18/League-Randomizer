@@ -134,6 +134,7 @@ function generateSpell1() {
             var spellName = spells[random];
         }
 
+        spell1 = spellName;
         var spell = document.getElementById('spell1');
         spell.innerHTML = spellName;
 
@@ -161,6 +162,7 @@ function generateSpell2() {
             var spellName = spells[random];
         }
 
+        spell2 = spellName;
         var spell = document.getElementById('spell2');
         spell.innerHTML = spellName;
 
