@@ -1,0 +1,105 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: "Times New Roman", Times, serif; 
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+button {
+    background-color: #1585e0;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #007bff;
+}
+
+.hidden {
+    display: none;
+}
+
+.championContainer, .roleContainer, .spellContainer1, .spellContainer2 {
+    width: 250px; 
+    padding: 10px; 
+    text-align: center; 
+    background-color: #303030;
+    color: white; 
+    border-radius: 10px; 
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    margin: 10px;
+    display: inline-block;
+    visibility: hidden;
+}
+
+h2 {
+    color: #1585e0;
+}
+
+img {
+    width: 100px; 
+    height: 100px;
+    padding: 10px;
+}
+
+.itemsContainer, .runesContainer {
+    padding: 10px; 
+    text-align: center; 
+    background-color: #303030;
+    color: white; 
+    border-radius: 10px; 
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    margin: 10px;
+    display: inline-block;
+    visibility: hidden;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .arrow {
+    position: absolute;
+    width: 10px; 
+    height: 10px; 
+    background-color: #303030; 
+    top: -8px;
+    left: calc(50% - 5px); 
+    transform: rotate(45deg); 
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    min-width: 120px;
+    max-width: 200px; 
+    background-color: #555555; 
+    color: white; 
+    text-align: center;
+    padding: 10px; 
+    border-radius: 8px; 
+    position: absolute;
+    z-index: 1;
+    top: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
