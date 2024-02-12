@@ -407,6 +407,8 @@ function generateRunes() {
 }
 
 function smite() {
+    var spell = document.getElementById('spell1');
+    
     var existingImage = document.querySelector('.spellImg1');
     if (existingImage) {
         existingImage.remove();
