@@ -16,7 +16,7 @@ function generateAll() {
 }
 
 function generateChamp() {
-    fetch('http://ddragon.leagueoflegends.com/cdn/14.3.1/data/en_US/champion.json')
+    fetch('https://ddragon.leagueoflegends.com/cdn/14.3.1/data/en_US/champion.json')
         .then(response => response.json())
         .then(data => {
             const championNames = Object.keys(data.data);
@@ -32,7 +32,7 @@ function generateChamp() {
                 existingImage.remove();
             }
 
-            var imageHTML = `<img src="http://ddragon.leagueoflegends.com/cdn/14.3.1/img/champion/${imageUrl}" alt="${championNames[random]}" class="champImg">`;
+            var imageHTML = `<img src="https://ddragon.leagueoflegends.com/cdn/14.3.1/img/champion/${imageUrl}" alt="${championNames[random]}" class="champImg">`;
             champ.insertAdjacentHTML('afterend', imageHTML);
         })
         .catch(error => {
@@ -175,7 +175,7 @@ function generateSpell2() {
 }
 
 function generateItems() {
-    fetch('http://ddragon.leagueoflegends.com/cdn/14.3.1/data/en_US/item.json')
+    fetch('https://ddragon.leagueoflegends.com/cdn/14.3.1/data/en_US/item.json')
         .then(response => response.json())
         .then(data => {
             var items = document.getElementById('items');
@@ -202,7 +202,7 @@ function generateItems() {
                     existingImage.remove();
                 }
 
-                var imageHTML = `<div class="tooltip"><img src="http://ddragon.leagueoflegends.com/cdn/14.3.1/img/item/${imageUrl}" alt="${itemName}" class="leg${i}"><span class="tooltiptext">${itemName}</span><div class="arrow"></div></div>`;
+                var imageHTML = `<div class="tooltip"><img src="https://ddragon.leagueoflegends.com/cdn/14.3.1/img/item/${imageUrl}" alt="${itemName}" class="leg${i}"><span class="tooltiptext">${itemName}</span><div class="arrow"></div></div>`;
                 items.insertAdjacentHTML('afterend', imageHTML);
                 legendary.splice(random, 1);
             }
@@ -222,7 +222,7 @@ function generateItems() {
                 existingImage.remove();
             }
 
-            var imageHTML = `<div class="tooltip"><img src="http://ddragon.leagueoflegends.com/cdn/14.3.1/img/item/${imageUrl}" alt="${itemName}" class="bootImg"><span class="tooltiptext">${itemName}</span><div class="arrow"></div></div>`;
+            var imageHTML = `<div class="tooltip"><img src="https://ddragon.leagueoflegends.com/cdn/14.3.1/img/item/${imageUrl}" alt="${itemName}" class="bootImg"><span class="tooltiptext">${itemName}</span><div class="arrow"></div></div>`;
             items.insertAdjacentHTML('afterend', imageHTML);
         })
         .catch(error => {
@@ -231,7 +231,7 @@ function generateItems() {
 }
 
 function findItemByName(itemName) {
-    return fetch('http://ddragon.leagueoflegends.com/cdn/14.3.1/data/en_US/item.json')
+    return fetch('https://ddragon.leagueoflegends.com/cdn/14.3.1/data/en_US/item.json')
         .then(response => response.json())
         .then(data => {
             const itemIds = Object.keys(data.data);
@@ -275,6 +275,7 @@ function generateRunes() {
     var random = Math.floor(Math.random() * paths.length);
     var primary = paths[random];
 
+    console.log(primary)
     paths.splice(random, 1);
 
     random = Math.floor(Math.random() * paths.length);
