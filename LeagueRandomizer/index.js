@@ -58,6 +58,14 @@ function generateRole() {
     const random = Math.floor(Math.random() * roles.length);
     roleName = roles[random];
 
+    if (roleName == 'Jungle') {
+        generateSpell1();
+    }
+
+    if (role != 'Jungle' && spell1 == 'Smite') {
+        generateSpell1();
+    }
+    
     var role = document.getElementById('role');
     role.innerHTML = roleName;
 
@@ -68,6 +76,7 @@ function generateRole() {
 
     var imageHTML = `<img src="roles/${roleName}.svg" alt="${roleName}" class="roleImg">`;
     role.insertAdjacentHTML('afterend', imageHTML);
+
 }
 
 var spell1;
@@ -127,9 +136,6 @@ function generateSpell1() {
         var spells = ['Ghost', 'Heal', 'Barrier', 'Exhaust', 'Flash', 'Teleport', 'Cleanse', 'Ignite'];
         var random = Math.floor(Math.random() * spells.length);
         var spellName = spells[random];
-
-        console.log(spellName);
-        console.log(spell2);
         
         if (spellName == spell2) {
             spells.splice(random, 1);
@@ -158,9 +164,6 @@ function generateSpell2() {
         var spells = ['Ghost', 'Heal', 'Barrier', 'Exhaust', 'Flash', 'Teleport', 'Cleanse', 'Ignite'];
         var random = Math.floor(Math.random() * spells.length);
         var spellName = spells[random];
-
-        console.log(spellName);
-        console.log(spell1);
         
         if (spellName == spell1) {
             spells.splice(random, 1);
