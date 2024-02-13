@@ -408,6 +408,8 @@ function generateRunes() {
 
 function smite() {
     var spell = document.getElementById('spell1');
+
+    spell.innerHTML = spellName;
     
     var existingImage = document.querySelector('.spellImg1');
     if (existingImage) {
