@@ -2,4 +2,6 @@
 
 PATCH 14.3.1
 
-Doesn't work for Firefox if using Github Pages. 
+If website doesn't work, broswer diff. Works for Safari, Google Chrome, and Firefox (sometimes). Others are not tested. 
+
+https://kenl18.github.io/League-Randomizer/LeagueRandomizer/
