@@ -57,14 +57,6 @@ function generateRole() {
     const roles = ['Top', 'Jungle', 'Mid', 'ADC', 'Support'];
     const random = Math.floor(Math.random() * roles.length);
     roleName = roles[random];
-
-    if (roleName == 'Jungle') {
-        smite();
-    }
-
-    if (role != 'Jungle' && spell1 == 'Smite') {
-        noSmite();
-    }
     
     var role = document.getElementById('role');
     role.innerHTML = roleName;
@@ -77,6 +69,13 @@ function generateRole() {
     var imageHTML = `<img src="roles/${roleName}.svg" alt="${roleName}" class="roleImg">`;
     role.insertAdjacentHTML('afterend', imageHTML);
 
+    if (roleName == 'Jungle') {
+        smite();
+    }
+
+    if (role != 'Jungle' && spell1 == 'Smite') {
+        noSmite();
+    }
 }
 
 var spell1;
@@ -417,6 +416,8 @@ function smite() {
     }
     var imageHTML = `<img src="spells/Smite.png" alt="Smite" class="spellImg1">`;
     spell.insertAdjacentHTML('afterend', imageHTML);
+
+    spell1 = 'Smite'
 }
 
 function noSmite() {
