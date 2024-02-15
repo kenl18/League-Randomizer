@@ -74,7 +74,7 @@ function generateRole() {
     }
 
     if (roleName != 'Jungle') {
-        noSmite();
+        generateSpell()
     }
 }
 
@@ -418,29 +418,6 @@ function smite() {
     spell.insertAdjacentHTML('afterend', imageHTML);
 
     spell1 = 'Smite'
-}
 
-function noSmite() {
-    var spells = ['Ghost', 'Heal', 'Barrier', 'Exhaust', 'Flash', 'Teleport', 'Cleanse', 'Ignite'];
-
-    var random = Math.floor(Math.random() * spells.length);
-    var spellName = spells[random];
-    
-    if (spellName == spell2) {
-        spells.splice(random, 1);
-        var random = Math.floor(Math.random() * spells.length);
-        var spellName = spells[random];
-    }
-        
-    spell1 = spellName;
-    var spell = document.getElementById('spell1');
-    spell.innerHTML = spellName;
-
-    var existingImage = document.querySelector('.spellImg1');
-    if (existingImage) {
-        existingImage.remove();
-    }
-
-    var imageHTML = `<img src="spells/${spellName}.png" alt="${spellName}" class="spellImg1">`;
-    spell.insertAdjacentHTML('afterend', imageHTML);
+    generateSpell2();
 }
