@@ -73,7 +73,7 @@ function generateRole() {
         smite();
     }
 
-    if (role != 'Jungle' && spell1 == 'Smite') {
+    if (role != 'Jungle') {
         noSmite();
     }
 }
