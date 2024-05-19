@@ -1,7 +1,14 @@
-# League-Randomizer
+> [!NOTE]  
+> Highlights information that users should take into account, even when skimming.
 
-PATCH 14.3.1
+> [!TIP]
+> Optional information to help a user be more successful.
 
-If website doesn't work, broswer diff. Works for Safari, Google Chrome, and Firefox. Others are not tested. 
+> [!IMPORTANT]  
+> Crucial information necessary for users to succeed.
 
-https://kenl18.github.io/League-Randomizer/LeagueRandomizer/
+> [!WARNING]  
+> Critical content demanding immediate user attention due to potential risks.
+
+> [!CAUTION]
+> Negative potential consequences of an action.
